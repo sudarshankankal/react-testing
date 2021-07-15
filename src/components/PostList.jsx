@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { Store } from "./store";
+import { Store } from "./StoreProvider";
 
 const PostList = () => {
   const data = useContext(Store);

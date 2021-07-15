@@ -1,6 +1,6 @@
 import "./App.css";
 import PostList from "./components/PostList";
-import { StoreProvider } from "./components/store";
+import { StoreProvider } from "./components/StoreProvider";
 import PostDetail from "./components/PostDetail";
 import FetchData from "./components/FetchData";
 

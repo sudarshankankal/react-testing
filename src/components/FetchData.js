@@ -1,42 +1,40 @@
-import React, { Component } from 'react'
-import axios from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
 export default class FetchData extends Component {
-    constructor(props){
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            name:'alpha',
-            error:null,
-            userId:'',
-            list:[]
-        }
-    }
+    this.state = {
+      name: "alpha",
+      error: null,
+      userId: "",
+      list: [],
+    };
+  }
 
-    componentDidMount(){
-        this.loadData();
-    }
+  componentDidMount() {
+    this.loadData();
+  }
 
-    loadData = async () => {
-        let url = 'https://jsonplaceholder.typicode.com/posts/1'
-        let options = {
-            method:'GET',
-            url:url
-        }
+  loadData = async () => {
+    let url = "https://jsonplaceholder.typicode.com/posts/1";
+    let options = {
+      method: "GET",
+      url: url,
+    };
 
-        try{
-            const response = await axios(options);
-            // console.log("Response",response);
-            await this.setState({userId:response.data.userId});
-        }catch(e){
-        }
-    }
+    try {
+      const response = await axios(options);
+      // console.log("Response",response);
+      await this.setState({ userId: response.data.userId });
+    } catch (e) {}
+  };
 
+  detectUser = () => {
+      return true;
+  };
 
-    render() {
-        return (
-            <div>
-                <input type="text" value={this.state.name}/>
-            </div>
-        )
-    }
+  render() {
+    return <div>{/* <input type="text" value={this.state.name}/> */}</div>;
+  }
 }

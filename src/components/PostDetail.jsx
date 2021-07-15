@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Store } from './store';
+import { Store } from './StoreProvider';
 
 const PostDetail = () => {
     const data = useContext(Store);
