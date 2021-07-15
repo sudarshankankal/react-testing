@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given App component save snapshot 1`] = `
+<div>
+  <StoreProvider>
+    <div
+      className="flex"
+    >
+      <div
+        className="box"
+      >
+        <PostList />
+      </div>
+      <div
+        className="box"
+      >
+        <PostDetail />
+      </div>
+    </div>
+  </StoreProvider>
+  <FetchData />
+</div>
+`;

@@ -1,7 +1,6 @@
 import React from 'react'
 import App from './App'
 import { mount, shallow } from 'enzyme'
-import PostList from './components/PostList'
 
 describe('Given App component',() => {
 
@@ -15,6 +14,11 @@ describe('Given App component',() => {
     const component = shallow(<App/>);
     const postDetail = component.find("PostDetail").exists();
     expect(postDetail).toBe(true);
+  })
+
+  test("save snapshot", () => {
+    const component = shallow(<App/>);
+    expect(component).toMatchSnapshot();
   })
 
 })
