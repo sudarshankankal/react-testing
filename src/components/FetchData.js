@@ -7,7 +7,7 @@ export default class FetchData extends Component {
         this.state = {
             name:'alpha',
             error:null,
-            age:'',
+            userId:'',
             list:[]
         }
     }
@@ -17,7 +17,7 @@ export default class FetchData extends Component {
     }
 
     loadData = async () => {
-        let url = 'https://jsonplaceholder.typicode.com/posts'
+        let url = 'https://jsonplaceholder.typicode.com/posts/1'
         let options = {
             method:'GET',
             url:url
@@ -25,9 +25,9 @@ export default class FetchData extends Component {
 
         try{
             const response = await axios(options);
-            this.setState({age:response.data.personAge});
+            // console.log("Response",response);
+            await this.setState({userId:response.data.userId});
         }catch(e){
-            throw new Error(e.message)
         }
     }
 
