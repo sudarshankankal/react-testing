@@ -19,5 +19,10 @@ exports[`Given App component save snapshot 1`] = `
     </div>
   </StoreProvider>
   <FetchData />
+  <div
+    className="flex"
+  >
+    <Login />
+  </div>
 </div>
 `;

@@ -3,6 +3,7 @@ import PostList from "./components/PostList";
 import { StoreProvider } from "./components/StoreProvider";
 import PostDetail from "./components/PostDetail";
 import FetchData from "./components/FetchData";
+import { Login } from "./components/Login";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         </div>
       </StoreProvider>
       <FetchData/>
+      <div className="flex">
+      <Login/>
+      </div>
     </div>
   );
 }
