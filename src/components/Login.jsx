@@ -5,7 +5,6 @@ export const Login = ({ onSubmit }) => {
   const [password, updatePassword] = useState('');
   const handleLogin = (e) => {
     e.preventDefault();
-    //do all the default login activities and then call the onsubmit prop method
     // onSubmit();
   };
   return (
