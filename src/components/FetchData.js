@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { ListGroup } from "react-bootstrap";
 export default class FetchData extends Component {
   constructor(props) {
     super(props);
@@ -17,7 +18,7 @@ export default class FetchData extends Component {
   }
 
   loadData = async () => {
-    let url = "https://jsonplaceholder.typicode.com/posts/1";
+    let url = "https://jsonplaceholder.typicode.com/posts";
     let options = {
       method: "GET",
       url: url,
@@ -26,7 +27,7 @@ export default class FetchData extends Component {
     try {
       const response = await axios(options);
       // console.log("Response",response);
-      await this.setState({ userId: response.data.userId });
+      await this.setState({ list: response.data,userId:2 });
     } catch (e) {}
   };
 
@@ -35,6 +36,16 @@ export default class FetchData extends Component {
   };
 
   render() {
-    return <div>{/* <input type="text" value={this.state.name}/> */}</div>;
+    const {list} = this.state;
+    return (
+      <ListGroup>
+        {
+          list.length ? (
+            list.map(post => <ListGroup.Item action  key={post.id}>{post.title}</ListGroup.Item>)
+          ):<div>Data Not Found</div>
+        }
+      </ListGroup>
+    )
+     
   }
 }

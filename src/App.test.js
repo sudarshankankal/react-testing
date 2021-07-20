@@ -16,10 +16,10 @@ describe('Given App component',() => {
     expect(postDetail).toBe(true);
   })
 
-  test("save snapshot", () => {
-    const component = shallow(<App/>);
-    expect(component).toMatchSnapshot();
-  })
+  // test("save snapshot", () => {
+  //   const component = shallow(<App/>);
+  //   expect(component).toMatchSnapshot();
+  // })
 
 })
 
