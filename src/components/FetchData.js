@@ -27,25 +27,29 @@ export default class FetchData extends Component {
     try {
       const response = await axios(options);
       // console.log("Response",response);
-      await this.setState({ list: response.data,userId:2 });
+      await this.setState({ list: response.data, userId: 2 });
     } catch (e) {}
   };
 
   detectUser = () => {
-      return true;
+    return true;
   };
 
   render() {
-    const {list} = this.state;
+    const { list } = this.state;
+    const {loader} = this.props;
     return (
       <ListGroup>
-        {
-          list.length ? (
-            list.map(post => <ListGroup.Item action  key={post.id}>{post.title}</ListGroup.Item>)
-          ):<div>Data Not Found</div>
-        }
+        {list.length ? (
+          list.map((post) => (
+            <ListGroup.Item action key={post.id}>
+              {post.title}
+            </ListGroup.Item>
+          ))
+        ) : (
+          <div loader={loader}>Data Not Found</div>
+        )}
       </ListGroup>
-    )
-     
+    );
   }
 }

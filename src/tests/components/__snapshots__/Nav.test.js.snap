@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given Nav Match Nav Snapshot 1`] = `
+<Navbar
+  bg="light"
+  collapseOnSelect={false}
+  expand={true}
+  variant="light"
+>
+  <Container
+    fluid={false}
+  >
+    <NavbarBrand>
+      React Unit Testing (Jest/Enzyme)
+    </NavbarBrand>
+  </Container>
+</Navbar>
+`;

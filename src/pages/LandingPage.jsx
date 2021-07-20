@@ -15,7 +15,7 @@ function LandingPage() {
           <Col>
             <SignUp />
           </Col>
-          <Col><FetchData/></Col>
+          <Col><FetchData loader={false}/></Col>
         </Row>
       </Container>
     </div>
