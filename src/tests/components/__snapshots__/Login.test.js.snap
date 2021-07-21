@@ -1,25 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Given Login Component Should render properly 1`] = `
-<div>
-  <input
-    name="email"
-    onChange={[Function]}
-    type="text"
-    value=""
-  />
-  <input
-    name="password"
-    onChange={[Function]}
-    type="password"
-    value=""
-  />
-  <button
-    name="submit"
-    onClick={[Function]}
-    type="submit"
-  >
-    Login
-  </button>
-</div>
+exports[`Given Sign In Component Should render properly 1`] = `
+<Card
+  body={false}
+>
+  <CardBody>
+    <CardHeader>
+      Sign In
+    </CardHeader>
+    <Form
+      inline={false}
+    >
+      <FormGroup
+        className="mb-3"
+        controlId="email"
+      >
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Email
+        </FormLabel>
+        <input
+          className="form-control"
+          name="email"
+          onChange={[Function]}
+          placeholder="Email"
+          type="email"
+          value=""
+        />
+      </FormGroup>
+      <FormGroup
+        className="mb-3"
+        controlId="formBasicPassword"
+      >
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Password
+        </FormLabel>
+        <input
+          className="form-control"
+          name="password"
+          onChange={[Function]}
+          placeholder="Password"
+          type="password"
+          value=""
+        />
+      </FormGroup>
+      <Button
+        active={false}
+        className="fullWidth"
+        disabled={false}
+        name="submit"
+        onClick={[Function]}
+        type="submit"
+        variant="info"
+      >
+        Sign In
+      </Button>
+    </Form>
+  </CardBody>
+</Card>
 `;

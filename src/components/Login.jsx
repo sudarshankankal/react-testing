@@ -7,6 +7,8 @@ export const Login = ({ onSubmit }) => {
   const handleLogin = (e) => {
     e.preventDefault();
     // onSubmit();
+    const user = {email,password}
+    return user;
   };
   return (
     <Card>
@@ -16,7 +18,8 @@ export const Login = ({ onSubmit }) => {
         <Form>
           <Form.Group className="mb-3" controlId="email">
             <Form.Label>Email</Form.Label>
-            <Form.Control
+            <input
+              className="form-control"
               type="email"
               placeholder="Email"
               value={email}
@@ -27,7 +30,8 @@ export const Login = ({ onSubmit }) => {
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control
+            <input
+              className="form-control"
               type="password"
               placeholder="Password"
               value={password}
