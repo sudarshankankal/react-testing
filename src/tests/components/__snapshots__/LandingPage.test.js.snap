@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given LandingPage Check Snapshot for LandingPage 1`] = `
+<div
+  className="box"
+>
+  <Container
+    fluid={true}
+  >
+    <Row
+      noGutters={false}
+    >
+      <Col>
+        <Login />
+      </Col>
+      <Col>
+        <SignUp />
+      </Col>
+      <Col>
+        <FetchData
+          loader={false}
+        />
+      </Col>
+    </Row>
+  </Container>
+</div>
+`;

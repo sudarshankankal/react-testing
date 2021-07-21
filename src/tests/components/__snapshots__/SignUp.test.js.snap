@@ -1,16 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Given Sign In Component Should render properly 1`] = `
+exports[`Given Sign Up Sign Up Form Should render properly 1`] = `
 <Card
   body={false}
 >
   <CardBody>
     <CardHeader>
-      Sign In
+      Sign Up
     </CardHeader>
     <Form
       inline={false}
     >
+      <FormGroup
+        className="mb-3"
+        controlId="fullName"
+      >
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Full Name
+        </FormLabel>
+        <input
+          className="form-control"
+          name="fullName"
+          onChange={[Function]}
+          placeholder="Full Name"
+          type="fullName"
+          value=""
+        />
+      </FormGroup>
       <FormGroup
         className="mb-3"
         controlId="email"
@@ -32,7 +51,26 @@ exports[`Given Sign In Component Should render properly 1`] = `
       </FormGroup>
       <FormGroup
         className="mb-3"
-        controlId="formBasicPassword"
+        controlId="phone"
+      >
+        <FormLabel
+          column={false}
+          srOnly={false}
+        >
+          Phone Number
+        </FormLabel>
+        <input
+          className="form-control"
+          name="phone"
+          onChange={[Function]}
+          placeholder="Phone Number"
+          type="phone"
+          value=""
+        />
+      </FormGroup>
+      <FormGroup
+        className="mb-3"
+        controlId="password"
       >
         <FormLabel
           column={false}
@@ -58,7 +96,7 @@ exports[`Given Sign In Component Should render properly 1`] = `
         type="submit"
         variant="info"
       >
-        Sign In
+        Sign Up
       </Button>
     </Form>
   </CardBody>

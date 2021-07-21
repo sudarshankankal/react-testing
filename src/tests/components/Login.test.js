@@ -2,12 +2,15 @@ import React from 'react'
 import {shallow,mount} from 'enzyme'
 import { Login } from '../../components/Login';
 
+let wrapper;
 
-describe('Given Login Component',() => {
+beforeEach(() => {
+    wrapper = shallow(<Login/>);
+})
+
+describe('Given Sign In Component',() => {
     
-    const wrapper = shallow(<Login/>);
-
-    test('Should render properly',async () => {
+    test('Should render properly',() => {
         expect(wrapper).toMatchSnapshot();
     })
 
@@ -22,7 +25,7 @@ describe('Given Login Component',() => {
     })
 
     test("should render submit button",() => {
-        const isPresent = wrapper.find('button[type="submit"]').exists();
+        const isPresent = wrapper.find('Button[type="submit"]').exists();
         expect(isPresent).toBe(true);
     })
 
@@ -35,7 +38,6 @@ describe('Given Login Component',() => {
     })
 
     test("on enter email value of the state should update",() => {
-        // const wrapper = shallow(<Login/>);
         wrapper.find('input[name="email"]').simulate('change',{
             target: {
                 value:'abc@email.com'
@@ -56,6 +58,14 @@ describe('Given Login Component',() => {
 
         const password = wrapper.find('input[name="password"]').prop('value');
         expect(password).toBe('abc@123');
+    })
+
+    test.skip("On Submit Click it should give all form values", () => {
+        const wrapper = mount(<Login/>)
+        const fakeEvent = { preventDefault: () => console.log('preventDefault') };
+        wrapper.find('Button[type="submit"]').simulate('click',fakeEvent);
+        const result = wrapper.instance().handleLogin()
+        expect(result).toEqual({email:'',password:''})
     })
 
 

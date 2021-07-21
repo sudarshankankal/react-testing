@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Given FetchData Component save FetchData snapshot 1`] = `<div />`;
+exports[`Given FetchData Component Check FetchData snapshot 1`] = `
+<ListGroup>
+  <div>
+    Data Not Found
+  </div>
+</ListGroup>
+`;
