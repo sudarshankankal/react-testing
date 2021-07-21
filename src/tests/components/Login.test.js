@@ -2,11 +2,14 @@ import React from 'react'
 import {shallow,mount} from 'enzyme'
 import { Login } from '../../components/Login';
 
+let wrapper;
+
+beforeEach(() => {
+    wrapper = shallow(<Login/>);
+})
 
 describe('Given Sign In Component',() => {
     
-    const wrapper = shallow(<Login/>);
-
     test('Should render properly',() => {
         expect(wrapper).toMatchSnapshot();
     })

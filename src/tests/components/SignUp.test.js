@@ -2,9 +2,13 @@ import React from "react";
 import { shallow } from "enzyme";
 import { SignUp } from "../../components/SignUp";
 
-describe("Given Sign Up", () => {
-  const wrapper = shallow(<SignUp />);
+let wrapper;
 
+beforeEach(() => {
+  wrapper = shallow(<SignUp />);
+});
+
+describe("Given Sign Up", () => {
   test("Sign Up Form Should render properly", () => {
     expect(wrapper).toMatchSnapshot();
   });
