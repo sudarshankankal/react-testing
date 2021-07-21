@@ -4,7 +4,7 @@ import { Button, Card, Form } from "react-bootstrap";
 export const SignUp = ({ onSubmit }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [userName, setUserName] = useState("");
+  const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const handleLogin = (e) => {
     e.preventDefault();
@@ -17,20 +17,22 @@ export const SignUp = ({ onSubmit }) => {
       {/* <Card.Title>Login</Card.Title> */}
         <Form>
 
-        <Form.Group className="mb-3" controlId="userName">
-            <Form.Label>User Name</Form.Label>
-            <Form.Control
-              type="userName"
-              placeholder="Username"
-              value={userName}
-              name="userName"
-              onChange={(e) => setUserName(e.target.value)}
+        <Form.Group className="mb-3" controlId="fullName">
+            <Form.Label>Full Name</Form.Label>
+            <input
+              className="form-control"
+              type="fullName"
+              placeholder="Full Name"
+              value={fullName}
+              name="fullName"
+              onChange={(e) => setFullName(e.target.value)}
             />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="email">
             <Form.Label>Email</Form.Label>
-            <Form.Control
+            <input
+              className="form-control"
               type="email"
               placeholder="Email"
               value={email}
@@ -41,7 +43,8 @@ export const SignUp = ({ onSubmit }) => {
 
           <Form.Group className="mb-3" controlId="phone">
             <Form.Label>Phone Number</Form.Label>
-            <Form.Control
+            <input
+              className="form-control"
               type="phone"
               placeholder="Phone Number"
               value={phone}
@@ -52,7 +55,8 @@ export const SignUp = ({ onSubmit }) => {
 
           <Form.Group className="mb-3" controlId="password">
             <Form.Label>Password</Form.Label>
-            <Form.Control
+            <input
+              className="form-control"
               type="password"
               placeholder="Password"
               value={password}
